@@ -1,0 +1,18 @@
+{
+    "name": "gazsp/silex-eloquent",
+    "description": "Eloquent ORM service provider for Silex",
+    "authors": [
+        {
+            "name": "Gary Pearman",
+            "email": "gpearman@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^5.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "Eloquent": "src/"
+        }
+    }
+}

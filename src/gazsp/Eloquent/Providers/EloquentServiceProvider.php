@@ -1,6 +1,6 @@
 <?php
 
-namespace App\ServiceProviders;
+namespace Gazsp\Eloquent\Providers;
 
 use Silex\Application;
 use Silex\ServiceProviderInterface;

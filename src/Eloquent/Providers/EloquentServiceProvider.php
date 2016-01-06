@@ -24,7 +24,5 @@ class EloquentServiceProvider implements ServiceProviderInterface {
         $app['db']->bootEloquent();
     }
 
-    public function boot(Application $app) {
-    }
-
+    public function boot(Application $app) { }
 }

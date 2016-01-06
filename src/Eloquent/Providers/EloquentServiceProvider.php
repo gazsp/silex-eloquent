@@ -9,7 +9,7 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 class EloquentServiceProvider implements ServiceProviderInterface {
 
     public function register(Application $app) {
-        $this['db'] = $app->share(function() use($app) {
+        $app['db'] = $app->share(function() use($app) {
             $capsule = new Capsule;
             $capsule->addConnection(
                 $app['config']['database']['connections'][
@@ -20,8 +20,8 @@ class EloquentServiceProvider implements ServiceProviderInterface {
             return $capsule;
         });
 
-        $this['db']->setAsGlobal();
-        $this['db']->bootEloquent();
+        $app['db']->setAsGlobal();
+        $app['db']->bootEloquent();
     }
 
     public function boot(Application $app) {
